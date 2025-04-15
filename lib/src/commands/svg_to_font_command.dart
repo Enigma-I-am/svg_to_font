@@ -322,8 +322,8 @@ import 'package:flutter/widgets.dart';
 
     """;
     final String emitterResult =
-        DartFormatter().format('${bbIcons.accept(emitter)}');
-    final DartFormatter formatter = DartFormatter();
+        DartFormatter(languageVersion: DartFormatter.latestLanguageVersion).format('${bbIcons.accept(emitter)}');
+    final DartFormatter formatter = DartFormatter(languageVersion: DartFormatter.latestLanguageVersion);
     final String result =
         formatter.format(ignore + header + import + emitterResult);
 
