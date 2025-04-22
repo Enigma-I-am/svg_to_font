@@ -328,6 +328,8 @@ class SvgToFontCommand extends Command<int> {
 ''';
 
     const String import = """
+library;
+
 import 'package:flutter/widgets.dart';
 
     """;
