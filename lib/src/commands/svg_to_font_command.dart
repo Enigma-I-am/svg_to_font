@@ -242,6 +242,7 @@ class SvgToFontCommand extends Command<int> {
       (ClassBuilder builder) {
         final ClassBuilder classBuilder = builder;
         classBuilder.annotations.add(refer('staticIconProvider'));
+        classBuilder.abstract = true;
         classBuilder.name = className;
         classBuilder.methods.add(
           Method(
@@ -331,9 +332,6 @@ class SvgToFontCommand extends Command<int> {
 library;
 
 import 'package:flutter/widgets.dart';
-
-@visibleForTesting
-KamonaIcons get initKamonaIconsTest => KamonaIcons._();
 
     """;
     final String emitterResult =
