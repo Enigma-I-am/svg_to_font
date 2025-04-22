@@ -332,6 +332,9 @@ library;
 
 import 'package:flutter/widgets.dart';
 
+@visibleForTesting
+KamonaIcons get initKamonaIconsTest => KamonaIcons._();
+
     """;
     final String emitterResult =
         DartFormatter(languageVersion: DartFormatter.latestLanguageVersion).format('${bbIcons.accept(emitter)}');
